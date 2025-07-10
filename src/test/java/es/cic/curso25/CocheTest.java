@@ -25,18 +25,32 @@ public class CocheTest {
         assertEquals(57, velocidadFinal);
     }
 
+    @Disabled
     @Test
     void testFrenar() {
+        cut.acelerar(50);
+        int velocidadFinal = cut.frenar(23);
 
+        assertEquals(27, velocidadFinal);
     }
 
+    @Disabled
     @Test
     void testGetConsumo() {
+        cut.acelerar(50);
 
+        double consumoActual = cut.getConsumo();
+
+        assertEquals(2.15, consumoActual);
     }
 
+    @Disabled
     @Test
     void testGetVelocidad() {
+        cut.acelerar(50);
 
+        int velocidadFinal = cut.getVelocidad();
+
+        assertEquals(50, velocidadFinal);
     }
 }
